@@ -35,6 +35,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <th>Mã</th>
         <th>Tên</th>
         <th>Mô tả</th>
+        <th>Chức năng</th>
     </tr>
     <?php
     $bienDem = 1;
@@ -44,6 +45,10 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <td><?= $row['lsp_ma']; ?></td>
         <td><?= $row['lsp_ten']; ?></td>
         <td><?php echo $row['lsp_mota']; ?></td>
+        <td>
+            <!-- Truyền dữ liệu GET trên URL, theo dạng ?KEY1=VALUE1&KEY2=VALUE2 -->
+            <a href="/web02/loaisanpham/sua.php?khoachinh=<?= $row['lsp_ma']; ?>&khoabimat=1234">Sửa</a>
+        </td>
     </tr>
     <?php $bienDem++; ?>
     <?php endforeach; ?>
