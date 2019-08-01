@@ -14,11 +14,27 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 }
 /*
 [
-    ['lsp_ma' => 1, 'lsp_ten' => 'MÃ¡y tÃ­nh báº£ng', 'lsp_mota' => ''],
-    ['lsp_ma' => 2, 'lsp_ten' => 'MÃ¡y tÃ­nh báº£ng', 'lsp_mota' => ''],
-    ['lsp_ma' => 3, 'lsp_ten' => 'MÃ¡y tÃ­nh báº£ng', 'lsp_mota' => ''],
+    ['lsp_ma' => 1, 'lsp_ten' => 'MÃ¡y tÃ­nh báº£ng', 'lsp_mota' => ''], row1
+    ['lsp_ma' => 2, 'lsp_ten' => 'MÃ¡y tÃ­nh báº£ng', 'lsp_mota' => ''], row2
+    ['lsp_ma' => 3, 'lsp_ten' => 'MÃ¡y tÃ­nh báº£ng', 'lsp_mota' => ''], row3
+    ...
 ]
 */
-print_r($data);die;
-
+// print_r($data);die;
+// var_dump($data);die;
 ?>
+
+<table border="1">
+    <tr>
+        <th>Mã</th>
+        <th>Tên</th>
+        <th>Mô tả</th>
+    </tr>
+    <?php foreach($data as $row) { ?>
+    <tr>
+        <td><?= $row['lsp_ma']; ?></td>
+        <td><?= $row['lsp_ten']; ?></td>
+        <td><?php echo $row['lsp_mota']; ?></td>
+    </tr>
+    <?php } ?>
+</table>
