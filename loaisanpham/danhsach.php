@@ -30,11 +30,11 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <th>Tên</th>
         <th>Mô tả</th>
     </tr>
-    <?php foreach($data as $row) { ?>
+    <?php foreach($data as $row): ?>
     <tr>
         <td><?= $row['lsp_ma']; ?></td>
         <td><?= $row['lsp_ten']; ?></td>
         <td><?php echo $row['lsp_mota']; ?></td>
     </tr>
-    <?php } ?>
+    <?php endforeach; ?>
 </table>
