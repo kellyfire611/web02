@@ -24,17 +24,27 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 // var_dump($data);die;
 ?>
 
+<style>
+.rowchan {
+    background: red;
+}
+</style>
+
 <table border="1">
     <tr>
         <th>Mã</th>
         <th>Tên</th>
         <th>Mô tả</th>
     </tr>
+    <?php
+    $bienDem = 1;
+    ?>
     <?php foreach($data as $row): ?>
-    <tr>
+    <tr class="<?php echo ($bienDem % 2 == 0 ? 'rowchan' : '') ?>">
         <td><?= $row['lsp_ma']; ?></td>
         <td><?= $row['lsp_ten']; ?></td>
         <td><?php echo $row['lsp_mota']; ?></td>
     </tr>
+    <?php $bienDem++; ?>
     <?php endforeach; ?>
 </table>
