@@ -1,3 +1,1 @@
-<?php
-Hello PHP and GIT~
-?>
+<h1>Hello</h1>
