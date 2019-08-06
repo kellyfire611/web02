@@ -48,6 +48,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <td>
             <!-- Truyền dữ liệu GET trên URL, theo dạng ?KEY1=VALUE1&KEY2=VALUE2 -->
             <a href="/web02/loaisanpham/sua.php?lsp_ma=<?= $row['lsp_ma']; ?>">Sửa</a>
+            <a href="/web02/loaisanpham/xoa.php?lsp_ma=<?= $row['lsp_ma']; ?>">Xóa</a>
         </td>
     </tr>
     <?php $bienDem++; ?>
