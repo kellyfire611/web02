@@ -47,7 +47,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <td><?php echo $row['lsp_mota']; ?></td>
         <td>
             <!-- Truyền dữ liệu GET trên URL, theo dạng ?KEY1=VALUE1&KEY2=VALUE2 -->
-            <a href="/web02/loaisanpham/sua.php?lsp_ma=<?= $row['lsp_ma']; ?>&khoabimat=1234">Sửa</a>
+            <a href="/web02/loaisanpham/sua.php?lsp_ma=<?= $row['lsp_ma']; ?>">Sửa</a>
         </td>
     </tr>
     <?php $bienDem++; ?>
