@@ -37,6 +37,9 @@
         $sqlUpdate = "UPDATE loaisanpham SET lsp_ten = N'$lsp_ten', lsp_mota = N'$lsp_mota' WHERE lsp_ma = $lsp_ma;";
         mysqli_query($conn, $sqlUpdate);
         echo 'Lưu thành công!';
+
+        // Sau khi cập nhật dữ liệu, tự động điều hướng về trang Danh sách
+        header('location:danhsach.php');
     }
     ?>
 </body>
