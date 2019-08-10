@@ -44,6 +44,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             <th>Loại sản phẩm</th>
             <th>Nhà sản phẩm</th>
             <th>Khuyến mãi sản phẩm</th>
+            <th>Chức năng</th>
         </tr>
     </thead>
     <tbody>
@@ -58,6 +59,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             <td><?= $row['lsp_ten'] ?></td>
             <td><?= $row['nsx_ten'] ?></td>
             <td><?= $row['km_ten'] ?></td>
+            <td>
+                <a href="/web02/sanpham/sua.php?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
+            </td>
         </tr>
         <?php endforeach; ?>
     </tbody>
