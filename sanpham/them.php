@@ -72,3 +72,21 @@ while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
     <br />
     <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" />
 </form>
+
+<?php
+if(isset($_POST['btnLuu'])) {
+    $sp_ten = $_POST['sp_ten'];
+    $sp_gia = $_POST['sp_gia'];
+    $sp_giacu = $_POST['sp_giacu'];
+    $sp_mota_ngan = $_POST['sp_mota_ngan'];
+    $sp_mota_chitiet = $_POST['sp_mota_chitiet'];
+    $sp_ngaycapnhat = $_POST['sp_ngaycapnhat'];
+    $sp_soluong = $_POST['sp_soluong'];
+    $lsp_ma = $_POST['lsp_ma'];
+    $nsx_ma = $_POST['nsx_ma'];
+    $km_ma = isset($_POST['km_ma']) ? $_POST['km_ma'] : 'NULL';
+
+    $sqlInsert = "INSERT INTO sanpham(sp_ten, sp_gia, sp_giacu, sp_mota_ngan, sp_mota_chitiet, sp_ngaycapnhat, sp_soluong, lsp_ma, nsx_ma, km_ma) VALUES (N'$sp_ten', $sp_gia, $sp_giacu, N'$sp_mota_ngan', N'$sp_mota_chitiet', '$sp_ngaycapnhat', $sp_soluong, $lsp_ma, $nsx_ma, $km_ma);";
+    $resultInsert = mysqli_query($conn, $sqlInsert);
+}
+?>
