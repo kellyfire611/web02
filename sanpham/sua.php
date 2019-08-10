@@ -119,7 +119,23 @@ if(isset($_POST['btnLuu'])) {
     $nsx_ma = $_POST['nsx_ma'];
     $km_ma = isset($_POST['km_ma']) ? $_POST['km_ma'] : 'NULL';
 
-    $sqlUpdate = "UPDATE sanpham SET sp_ten=N'$sp_ten', sp_gia=$sp_gia, sp_giacu=$sp_giacu, sp_mota_ngan=N'$sp_mota_ngan', sp_mota_chitiet='$sp_mota_chitiet', sp_ngaycapnhat='$sp_ngaycapnhat', sp_soluong=$sp_soluong, lsp_ma=$lsp_ma, nsx_ma=$nsx_ma, km_ma=$km_ma WHERE sp_ma=$sp_ma";
+    $sqlUpdate = <<<EOT
+    UPDATE sanpham
+	SET
+		sp_ten=N'$sp_ten',
+		sp_gia=$sp_gia,
+		sp_giacu=$sp_giacu,
+		sp_mota_ngan=N'$sp_mota_ngan',
+		sp_mota_chitiet='$sp_mota_chitiet',
+		sp_ngaycapnhat='$sp_ngaycapnhat',
+		sp_soluong=$sp_soluong,
+		lsp_ma=$lsp_ma,
+		lsp_ma=$lsp_ma,
+		km_ma=km_ma
+	WHERE sp_ma=$sp_ma;
+EOT;
+
+    // print_r($sqlUpdate);die;
     $resultUpdate = mysqli_query($conn, $sqlUpdate);
 }
 ?>
