@@ -73,7 +73,11 @@ while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
     Loại sản phẩm: 
     <select name="lsp_ma" id="lsp_ma">
         <?php foreach($dataLoaiSanPham as $loaiSanPham) : ?>
-        <option value="<?= $loaiSanPham['lsp_ma'] ?>"><?= $loaiSanPham['lsp_ten'] ?></option>
+            <?php if($loaiSanPham['lsp_ma'] == $sanphamRow['lsp_ma']) { ?>
+                <option value="<?= $loaiSanPham['lsp_ma'] ?>" selected><?= $loaiSanPham['lsp_ten'] ?></option>
+            <?php } else { ?>
+                <option value="<?= $loaiSanPham['lsp_ma'] ?>"><?= $loaiSanPham['lsp_ten'] ?></option>
+            <?php } ?>
         <?php endforeach; ?>
     </select>
     <br />
@@ -91,9 +95,31 @@ while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
     Khuyến mãi: 
     <select name="km_ma" id="km_ma">
         <?php foreach($dataKhuyenMai as $khuyenmai) : ?>
-        <option value="<?= $khuyenmai['km_ma'] ?>"><?= $khuyenmai['km_ten'] ?></option>
+            <?php if($khuyenmai['km_ma'] == $sanphamRow['km_ma']) { ?>
+                <option value="<?= $khuyenmai['km_ma'] ?>" selected><?= $khuyenmai['km_ten'] ?></option>
+            <?php } else { ?>
+                <option value="<?= $khuyenmai['km_ma'] ?>"><?= $khuyenmai['km_ten'] ?></option>
+            <?php } ?>
         <?php endforeach; ?>
     </select>
     <br />
     <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" />
 </form>
+
+<?php
+if(isset($_POST['btnLuu'])) {
+    $sp_ten = $_POST['sp_ten'];
+    $sp_gia = $_POST['sp_gia'];
+    $sp_giacu = $_POST['sp_giacu'];
+    $sp_mota_ngan = $_POST['sp_mota_ngan'];
+    $sp_mota_chitiet = $_POST['sp_mota_chitiet'];
+    $sp_ngaycapnhat = $_POST['sp_ngaycapnhat'];
+    $sp_soluong = $_POST['sp_soluong'];
+    $lsp_ma = $_POST['lsp_ma'];
+    $nsx_ma = $_POST['nsx_ma'];
+    $km_ma = isset($_POST['km_ma']) ? $_POST['km_ma'] : 'NULL';
+
+    $sqlUpdate = "UPDATE sanpham SET sp_ten=N'$sp_ten', sp_gia=$sp_gia, sp_giacu=$sp_giacu, sp_mota_ngan=N'$sp_mota_ngan', sp_mota_chitiet='$sp_mota_chitiet', sp_ngaycapnhat='$sp_ngaycapnhat', sp_soluong=$sp_soluong, lsp_ma=$lsp_ma, nsx_ma=$nsx_ma, km_ma=$km_ma WHERE sp_ma=$sp_ma";
+    $resultUpdate = mysqli_query($conn, $sqlUpdate);
+}
+?>
