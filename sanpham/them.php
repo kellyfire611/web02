@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../dbconnect.php';
 
+// Lấy dữ liệu Loại sản phẩm
 $sqlLoaiSanPham = <<<EOT
     SELECT * FROM loaisanpham;
 EOT;
@@ -10,6 +11,32 @@ while ($row = mysqli_fetch_array($resultLoaiSanPham, MYSQLI_ASSOC)) {
     $dataLoaiSanPham[] = array(
         'lsp_ma' => $row['lsp_ma'],
         'lsp_ten' => $row['lsp_ten'],
+    );
+}
+
+// Lấy dữ liệu Nhà sản xuất
+$sqlNhaSanXuat = <<<EOT
+    SELECT * FROM nhasanxuat;
+EOT;
+$resultNhaSanXuat = mysqli_query($conn, $sqlNhaSanXuat);
+$dataNhaSanXuat = [];
+while ($row = mysqli_fetch_array($resultNhaSanXuat, MYSQLI_ASSOC)) {
+    $dataNhaSanXuat[] = array(
+        'nsx_ma' => $row['nsx_ma'],
+        'nsx_ten' => $row['nsx_ten'],
+    );
+}
+
+// Lấy dữ liệu Khuyến mãi
+$sqlKhuyenMai = <<<EOT
+    SELECT * FROM khuyenmai;
+EOT;
+$resultKhuyenMai = mysqli_query($conn, $sqlKhuyenMai);
+$dataKhuyenMai = [];
+while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
+    $dataKhuyenMai[] = array(
+        'km_ma' => $row['km_ma'],
+        'km_ten' => $row['km_ten'],
     );
 }
 ?>
@@ -28,9 +55,20 @@ while ($row = mysqli_fetch_array($resultLoaiSanPham, MYSQLI_ASSOC)) {
         <option value="<?= $loaiSanPham['lsp_ma'] ?>"><?= $loaiSanPham['lsp_ten'] ?></option>
         <?php endforeach; ?>
     </select>
-    
     <br />
-    
-
+    Nhà sản xuất: 
+    <select name="nsx_ma" id="nsx_ma">
+        <?php foreach($dataNhaSanXuat as $nhasanxuat) : ?>
+        <option value="<?= $nhasanxuat['nsx_ma'] ?>"><?= $nhasanxuat['nsx_ten'] ?></option>
+        <?php endforeach; ?>
+    </select>
+    <br />
+    Khuyến mãi: 
+    <select name="km_ma" id="km_ma">
+        <?php foreach($dataKhuyenMai as $khuyenmai) : ?>
+        <option value="<?= $khuyenmai['km_ma'] ?>"><?= $khuyenmai['km_ten'] ?></option>
+        <?php endforeach; ?>
+    </select>
+    <br />
     <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" />
 </form>
