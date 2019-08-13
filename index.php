@@ -8,9 +8,25 @@
 
     <!-- Liên kết CSS bootstrap -->
     <link href="public/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+    <style>
+    div {
+        border: 1px solid red;
+    }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Header -->
+        <div class="row">
+            <div class="col-md-6 col-12 col-xl-3">
+                Cột LOGO
+            </div><!-- /End cột LOGO -->
+            <div class="col-md-6 col-12 col-xl-9">
+                Cột Tên công ty
+            </div><!-- /End cột COMPANY NAME -->
+        </div><!-- /End header -->
+    </div>
 
 
     <!-- Hầu như tích hợp thư viện JS trước khi đóng thẻ BODY để tăng trải nghiệm người dùng -->
