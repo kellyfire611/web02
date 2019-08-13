@@ -26,6 +26,37 @@
                 Cột Tên công ty
             </div><!-- /End cột COMPANY NAME -->
         </div><!-- /End header -->
+
+        <!-- Main content -->
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="loaisanpham/danhsach.php">Danh sách Loại sản phẩm</a></li>
+                    <li class="list-group-item"><a href="sanpham/danhsach.php">Danh sách Sản phẩm</a></li>
+                </ul>
+            </div><!-- /End sidebar -->
+            <!-- Content -->
+            <div class="col-md-9">
+                CONTENT
+            </div><!-- /End content -->
+        </div><!-- /End main content -->
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-md-3">
+                Cột ABOUT US
+            </div><!-- /End cột ABOUT US -->
+            <div class="col-md-3">
+                Cột LINK
+            </div><!-- /End cột LINK -->
+            <div class="col-md-3">
+                Cột NEWS
+            </div><!-- /End cột NEWS -->
+            <div class="col-md-3">
+                Cột GOOGLE MAP
+            </div><!-- /End cột MAP -->
+        </div><!-- /End Footer -->
     </div>
 
 
