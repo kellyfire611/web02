@@ -61,6 +61,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             <td><?= $row['km_ten'] ?></td>
             <td>
                 <a href="/web02/sanpham/sua.php?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
+                <a href="/web02/sanpham/xoa.php?sp_ma=<?= $row['sp_ma']; ?>">Xóa</a>
             </td>
         </tr>
         <?php endforeach; ?>
