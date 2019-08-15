@@ -38,7 +38,14 @@
             </div><!-- /End sidebar -->
             <!-- Content -->
             <div class="col-md-9">
-                CONTENT
+                <?php
+                $page = $_GET['page'];
+                if($page == 'loaisanpham_danhsach') {
+                    include('loaisanpham/danhsach.php');
+                } else if($page == 'sanpham_danhsach') {
+                    include('sanpham/danhsach.php');
+                }
+                ?>
             </div><!-- /End content -->
         </div><!-- /End main content -->
 
