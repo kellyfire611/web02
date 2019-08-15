@@ -32,8 +32,8 @@
             <!-- Sidebar -->
             <div class="col-md-3">
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="loaisanpham/danhsach.php">Danh sách Loại sản phẩm</a></li>
-                    <li class="list-group-item"><a href="sanpham/danhsach.php">Danh sách Sản phẩm</a></li>
+                    <li class="list-group-item"><a href="?page=loaisanpham_danhsach">Danh sách Loại sản phẩm</a></li>
+                    <li class="list-group-item"><a href="?page=sanpham_danhsach">Danh sách Sản phẩm</a></li>
                 </ul>
             </div><!-- /End sidebar -->
             <!-- Content -->
