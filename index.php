@@ -39,7 +39,8 @@
             <!-- Content -->
             <div class="col-md-9">
                 <?php
-                $page = $_GET['page'];
+                $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
+
                 if($page == 'loaisanpham_danhsach') {
                     include('loaisanpham/danhsach.php');
                 } else if($page == 'sanpham_danhsach') {
