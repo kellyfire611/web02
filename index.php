@@ -9,6 +9,9 @@
     <!-- Liên kết CSS bootstrap -->
     <link href="public/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 
+    <!-- Liên kết thêm FONT AWESOME -->
+    <link rel="stylesheet" href="public/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+
     <style>
     div {
         border: 1px solid red;

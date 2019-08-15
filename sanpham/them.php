@@ -70,7 +70,9 @@ while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
         <?php endforeach; ?>
     </select>
     <br />
-    <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" class="btn btn-primary" />
+    <button name="btnLuu" id="btnLuu" class="btn btn-primary">
+        <i class="fa fa-heartbeat" aria-hidden="true"></i> Lưu
+    </button>
 </form>
 
 <?php
