@@ -45,6 +45,8 @@
                     include('loaisanpham/danhsach.php');
                 } else if($page == 'sanpham_danhsach') {
                     include('sanpham/danhsach.php');
+                } else if($page == 'sanpham_them') {
+                    include('sanpham/them.php');
                 }
                 ?>
             </div><!-- /End content -->

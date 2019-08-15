@@ -42,8 +42,8 @@ while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
 ?>
 
 <form name="frmThemMoiSanPham" id="frmThemMoiSanPham" method="post" action="">
-    Tên sản phẩm: <input type="text" name="sp_ten" id="sp_ten" /><br />
-    Giá sản phẩm: <input type="text" name="sp_gia" id="sp_gia" /><br />
+    Tên sản phẩm: <input type="text" name="sp_ten" id="sp_ten" class="form-control" /><br />
+    Giá sản phẩm: <input type="text" name="sp_gia" id="sp_gia" class="form-control" /><br />
     Giá cũ sản phẩm: <input type="text" name="sp_giacu" id="sp_giacu" /><br />
     Mô tả ngắn sản phẩm: <input type="text" name="sp_mota_ngan" id="sp_mota_ngan" /><br />
     Mô tả chi tiết sản phẩm: <input type="text" name="sp_mota_chitiet" id="sp_mota_chitiet" /><br />
@@ -70,7 +70,7 @@ while ($row = mysqli_fetch_array($resultKhuyenMai, MYSQLI_ASSOC)) {
         <?php endforeach; ?>
     </select>
     <br />
-    <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" />
+    <input type="submit" name="btnLuu" id="btnLuu" value="Lưu dữ liệu" class="btn btn-primary" />
 </form>
 
 <?php

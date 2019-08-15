@@ -32,39 +32,41 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 // var_dump($data);die;
 ?>
 
-<a href="/web02/sanpham/them.php" class="btn btn-outline-primary">Thêm Sản phẩm</a>
-<table class="table table-bordered table-hover table-responsive table-sm">
-    <thead>
-        <tr>
-            <th>Mã sản phẩm</th>
-            <th>Tên sản phẩm</th>
-            <th>Giá sản phẩm</th>
-            <th>Giá cũ sản phẩm</th>
-            <th>Mô tả ngắn sản phẩm</th>
-            <th>Số lượng sản phẩm</th>
-            <th>Loại sản phẩm</th>
-            <th>Nhà sản phẩm</th>
-            <th>Khuyến mãi sản phẩm</th>
-            <th>Chức năng</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach($data as $row): ?>
-        <tr>
-            <td><?= $row['sp_ma'] ?></td>
-            <td><?= $row['sp_ten'] ?></td>
-            <td><?= $row['sp_gia'] ?></td>
-            <td><?= $row['sp_giacu'] ?></td>
-            <td><?= $row['sp_mota_ngan'] ?></td>
-            <td><?= $row['sp_soluong'] ?></td>
-            <td><?= $row['lsp_ten'] ?></td>
-            <td><?= $row['nsx_ten'] ?></td>
-            <td><?= $row['km_ten'] ?></td>
-            <td>
-                <a href="/web02/sanpham/sua.php?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
-                <a href="/web02/sanpham/xoa.php?sp_ma=<?= $row['sp_ma']; ?>">Xóa</a>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+<a href="/web02/index.php?page=sanpham_them" class="btn btn-outline-primary">Thêm Sản phẩm</a>
+<div class="table-responsive-sm">
+    <table class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá sản phẩm</th>
+                <th>Giá cũ sản phẩm</th>
+                <th>Mô tả ngắn sản phẩm</th>
+                <th>Số lượng sản phẩm</th>
+                <th>Loại sản phẩm</th>
+                <th>Nhà sản phẩm</th>
+                <th>Khuyến mãi sản phẩm</th>
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($data as $row): ?>
+            <tr>
+                <td><?= $row['sp_ma'] ?></td>
+                <td><?= $row['sp_ten'] ?></td>
+                <td><?= $row['sp_gia'] ?></td>
+                <td><?= $row['sp_giacu'] ?></td>
+                <td><?= $row['sp_mota_ngan'] ?></td>
+                <td><?= $row['sp_soluong'] ?></td>
+                <td><?= $row['lsp_ten'] ?></td>
+                <td><?= $row['nsx_ten'] ?></td>
+                <td><?= $row['km_ten'] ?></td>
+                <td>
+                    <a href="/web02/sanpham/sua.php?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
+                    <a href="/web02/sanpham/xoa.php?sp_ma=<?= $row['sp_ma']; ?>">Xóa</a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
