@@ -30,6 +30,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 }
 </style>
 
+<a href="/web02/loaisanpham/them.php">Thêm Loại sản phẩm</a>
 <table border="1">
     <tr>
         <th>Mã</th>

@@ -32,7 +32,8 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 // var_dump($data);die;
 ?>
 
-<table border="1">
+<a href="/web02/sanpham/them.php" class="btn btn-outline-primary">Thêm Sản phẩm</a>
+<table class="table table-bordered table-hover table-responsive table-sm">
     <thead>
         <tr>
             <th>Mã sản phẩm</th>
