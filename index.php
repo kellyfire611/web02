@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="public/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <style>
-    div {
-        border: 1px solid red;
-    }
+    
     </style>
 </head>
 <body>
@@ -72,7 +70,6 @@
         </div><!-- /End Footer -->
     </div>
 
-
     <!-- Hầu như tích hợp thư viện JS trước khi đóng thẻ BODY để tăng trải nghiệm người dùng -->
     <!-- Liên kết thư viện JQuery -->
     <script src="public/vendor/jquery/jquery.min.js"></script>
@@ -82,5 +79,11 @@
 
     <!-- Liên kết thư viện Bootstrap 4 -->
     <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Liên kết thư viện SweetAlert2 -->
+    <script src="public/vendor/sweetalert2/sweetalert2.all.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="public/js/sanpham/sanpham.js"></script>
 </body>
 </html>
