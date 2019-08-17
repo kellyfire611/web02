@@ -64,7 +64,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 <td>
                     <a href="/web02/sanpham/sua.php?sp_ma=<?= $row['sp_ma']; ?>">Sửa</a>
                     <!-- <a href="/web02/sanpham/xoa.php?sp_ma=">Xóa</a> -->
-                    <button class="btn btn-danger btn-delete">
+                    <button class="btn btn-danger btn-delete" data-sp-ma="<?= $row['sp_ma'] ?>">
                         <i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Xóa
                     </button>
                 </td>

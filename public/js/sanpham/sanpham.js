@@ -3,8 +3,10 @@
 $(document).ready(function () {
     // Tìm đối tượng đó, đăng ký sự kiện tương ứng
     $('.btn-delete').click(function (e) {
+        var sp_ma = $(this).data('sp-ma');
+
         Swal.fire({
-            title: 'Are you sure?',
+            title: 'Bạn có chắc chắn muốn xóa dòng có sp_ma = ' + sp_ma,
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,
@@ -20,6 +22,7 @@ $(document).ready(function () {
                 )
             }
         })
+
     });
 
 
