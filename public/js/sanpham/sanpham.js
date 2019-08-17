@@ -20,6 +20,9 @@ $(document).ready(function () {
                     'Your file has been deleted.',
                     'success'
                 )
+                
+                // Redirect (điều hướng)
+                window.location.href = "/web02/sanpham/xoa.php?sp_ma=" + sp_ma;
             }
         })
 
