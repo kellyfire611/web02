@@ -84,6 +84,13 @@
     <script src="public/vendor/sweetalert2/sweetalert2.all.min.js"></script>
 
     <!-- Custom script -->
-    <script src="public/js/sanpham/sanpham.js"></script>
+    <?php if($page == 'loaisanpham_danhsach') : ?>
+        <script src="public/js/loaisanpham/loaisanpham.js"></script>
+    <?php elseif($page == 'sanpham_danhsach') : ?>
+        <script src="public/js/sanpham/sanpham.js"></script>
+        <script src="public/js/sanpham/sanpham-search.js"></script>
+    <?php elseif($page == 'sanpham_them') : ?>
+        <script src="public/js/sanpham/sanpham-validate.js"></script>
+    <?php endif ?>
 </body>
 </html>
