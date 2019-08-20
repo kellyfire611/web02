@@ -92,7 +92,7 @@
     <?php elseif($page == 'sanpham_them') : ?>
         <script src="public/vendor/jqueryvalidation/jquery.validate.min.js"></script>
         <script src="public/vendor/jqueryvalidation/localization/messages_vi.min.js"></script>
-        <script src="public/js/sanpham/sanpham-validate.js"></script>
+        <!-- <script src="public/js/sanpham/sanpham-validate.js"></script> -->
     <?php endif ?>
 </body>
 </html>
