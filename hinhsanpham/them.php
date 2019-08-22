@@ -34,6 +34,8 @@ while ($row = mysqli_fetch_array($resultSanPham, MYSQLI_ASSOC)) {
 
 <?php
 if(isset($_POST['btnLuu'])) {
+    $sp_ma = $_POST['sp_ma'];
+
     // Đường dẫn để chứa thư mục upload trên ứng dụng web của chúng ta. Các bạn có thể tùy chỉnh theo ý các bạn.
     // Ví dụ: các file upload sẽ được lưu vào thư mục ./../public/uploads
     $upload_dir = "./../public/uploads/";
@@ -71,7 +73,11 @@ if(isset($_POST['btnLuu'])) {
         // Ví dụ: move file từ C:\xampp\tmp\php6091.tmp -> C:/xampp/htdocs/learning.nentang.vn/php/twig/assets/uploads/hoahong.jpg
         $hsp_tentaptin = $_FILES['hsp_tentaptin']['name'];
         move_uploaded_file($_FILES['hsp_tentaptin']['tmp_name'], $upload_dir.$hsp_tentaptin);
-        echo 'File Uploaded';
+        // echo 'File Uploaded';
+
+        // Insert dữ liệu vào Database
+        $sqlInsert = "INSERT INTO hinhsanpham	(hsp_tentaptin, sp_ma) VALUES ('$hsp_tentaptin', $sp_ma)";
+        $result = mysqli_query($conn, $sqlInsert);
     }
 
 }
