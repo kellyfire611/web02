@@ -15,7 +15,7 @@ while ($row = mysqli_fetch_array($resultSanPham, MYSQLI_ASSOC)) {
 }
 ?>
 
-<form name="frmSanPham" id="frmSanPham" method="post" action="" enctype="multipart/form-data">
+<form name="frmHinhSanPham" id="frmHinhSanPham" method="post" action="" enctype="multipart/form-data">
     Chọn hình ảnh:
     <input type="file" name="hsp_tentaptin" id="hsp_tentaptin" />
     <br />
