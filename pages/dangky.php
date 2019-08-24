@@ -41,7 +41,7 @@ require_once __DIR__ . '/../dbconnect.php';
 if(isset($_POST['btnLuu'])) {
     $kh_tendangnhap = $_POST['kh_tendangnhap'];
     // Mã hóa
-    $kh_matkhau = $_POST['kh_matkhau'];
+    $kh_matkhau = sha1($_POST['kh_matkhau']);
     $kh_ten = $_POST['kh_ten'];
     $kh_gioitinh = $_POST['kh_gioitinh'];
     $kh_diachi = $_POST['kh_diachi'];
