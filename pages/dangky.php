@@ -58,7 +58,8 @@ if(isset($_POST['btnLuu'])) {
     $kh_thangsinh = $_POST['kh_thangsinh'];
     $kh_namsinh = $_POST['kh_namsinh'];
     $kh_cmnd = $_POST['kh_cmnd'];
-    $kh_makichhoat = $_POST['kh_makichhoat'];
+    // $kh_makichhoat = $_POST['kh_makichhoat'];
+    $kh_makichhoat = date('YmdHis'); //20190827190522
     $kh_trangthai = $_POST['kh_trangthai'];
     // Checkbox
     $kh_quantri = isset($_POST['kh_quantri']) ? $_POST['kh_quantri'] : 0;
@@ -116,7 +117,7 @@ if(isset($_POST['btnLuu'])) {
             <tr>
                 <td>
                     Xin chào $kh_ten, cám ơn bạn đã đăng ký Hệ thống của chúng tôi. Vui lòng click vào liên kết sau để kích hoạt tài khoản!
-                    <a href="$siteUrl/php/twig/backend/pages/kichhoattaikhoan.php?kh_tendangnhap=$kh_tendangnhap&kh_makichhoat=$kh_makichhoat">Kích hoạt tài khoản</a>
+                    <a href="http://localhost:1000/web02/pages/kichhoattaikhoan.php?kh_tendangnhap=$kh_tendangnhap&kh_makichhoat=$kh_makichhoat">Kích hoạt tài khoản</a>
                 </td>
             </tr>
             <tr>
