@@ -26,6 +26,9 @@ if(isset($_POST['btnDangNhap'])) {
         echo 'Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin!';
     } else {
         echo 'Đăng nhập Thành công!';
+
+        // Lưu username vào trong session
+        $_SESSION['username'] = $kh_tendangnhap;
     }
 }
 ?>

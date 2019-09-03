@@ -1,6 +1,16 @@
 <?php
 require_once __DIR__ . '/../dbconnect.php';
 
+// Kiểm tra xác thực tài khoản
+if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+    // Đã đăng nhập rồi
+    echo 'Đã đăng nhập!';
+} else {
+    // Chưa đăng nhập
+    echo 'Bạn chưa đăng nhập. Vui lòng <a href="http://localhost:1000/web02/pages/dangnhap.php">click vào đây</a> để đến trang Đăng nhập';
+    die;
+}
+
 // Here DOCS
 // End of Text
 $sql = <<<EOT
