@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../dbconnect.php';
+require_once __DIR__ . '/../../dbconnect.php';
 
 // Kiểm tra xác thực tài khoản
 if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {

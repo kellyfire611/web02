@@ -11,10 +11,10 @@ require_once __DIR__ . '/../dbconnect.php';
     <title>Quản lý Salomon</title>
 
     <!-- Liên kết CSS bootstrap -->
-    <link href="public/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="./../public/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 
     <!-- Liên kết thêm FONT AWESOME -->
-    <link rel="stylesheet" href="public/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./../public/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <style>
     
@@ -82,27 +82,27 @@ require_once __DIR__ . '/../dbconnect.php';
 
     <!-- Hầu như tích hợp thư viện JS trước khi đóng thẻ BODY để tăng trải nghiệm người dùng -->
     <!-- Liên kết thư viện JQuery -->
-    <script src="public/vendor/jquery/jquery.min.js"></script>
+    <script src="./../public/vendor/jquery/jquery.min.js"></script>
 
     <!-- Liên kết thư viện POPPERJS -->
-    <script src="public/vendor/popperjs/popper.min.js"></script>
+    <script src="./../public/vendor/popperjs/popper.min.js"></script>
 
     <!-- Liên kết thư viện Bootstrap 4 -->
-    <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./../public/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Liên kết thư viện SweetAlert2 -->
-    <script src="public/vendor/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="./../public/vendor/sweetalert2/sweetalert2.all.min.js"></script>
 
     <!-- Custom script -->
     <?php if($page == 'loaisanpham_danhsach') : ?>
-        <script src="public/js/loaisanpham/loaisanpham.js"></script>
+        <script src="./../public/js/loaisanpham/loaisanpham.js"></script>
     <?php elseif($page == 'sanpham_danhsach') : ?>
-        <script src="public/js/sanpham/sanpham.js"></script>
-        <script src="public/js/sanpham/sanpham-search.js"></script>
+        <script src="./../public/js/sanpham/sanpham.js"></script>
+        <script src="./../public/js/sanpham/sanpham-search.js"></script>
     <?php elseif($page == 'sanpham_them') : ?>
-        <script src="public/vendor/jqueryvalidation/jquery.validate.min.js"></script>
-        <script src="public/vendor/jqueryvalidation/localization/messages_vi.min.js"></script>
-        <!-- <script src="public/js/sanpham/sanpham-validate.js"></script> -->
+        <script src="./../public/vendor/jqueryvalidation/jquery.validate.min.js"></script>
+        <script src="./../public/vendor/jqueryvalidation/localization/messages_vi.min.js"></script>
+        <!-- <script src="./../public/js/sanpham/sanpham-validate.js"></script> -->
     <?php endif ?>
 </body>
 </html>
