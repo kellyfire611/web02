@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../dbconnect.php';
+require_once __DIR__ . '/../../dbconnect.php';
 
 // Lấy dữ liệu Sản phẩm
 $sqlSanPham = <<<EOT

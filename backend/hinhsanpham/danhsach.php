@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../dbconnect.php';
+require_once __DIR__ . '/../../dbconnect.php';
 
 $sql = <<<EOT
     SELECT hsp.hsp_ma, sp.sp_ten, sp.sp_gia, hsp.hsp_tentaptin
