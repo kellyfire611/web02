@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/web02/public/vendor/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" />
 
     <!-- Custom css - Các file css do chúng ta tự viết -->
-    <link rel="stylesheet" href="/web02/public/frontend/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/web02/public/frontend/css/custom-style.css" type="text/css" />
 
     <!-- Block custom-styles - Đục lỗ trên giao diện bố cục chung, đặt tên là `custom-styles` -->
     {% block customstyles %}
@@ -31,7 +31,7 @@
     {{ include('frontend/layouts/includes/header.html.twig') }}
     <!-- end header -->
 
-    <main role="main">
+    <main role="main" class="content-wrapper">
         <!-- Block content - Đục lỗ (placeholder) trên giao diện bố cục chung, đặt tên là `content` -->
         {% block content %}
         {% endblock %}

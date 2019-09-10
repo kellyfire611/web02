@@ -1,0 +1,9 @@
+.content-wrapper {
+    margin-top: 56px;
+}
+
+/* Hiệu chỉnh CSS cho Slider Trang chủ */
+#myCarousel > .carousel-inner > .carousel-item > img {
+    width: 100%;
+    height: 550px;
+}
