@@ -41,6 +41,49 @@ while ($row = mysqli_fetch_array($resultSelectSanPham, MYSQLI_ASSOC)) {
 }
 /* --- End Truy vấn dữ liệu Sản phẩm --- */
 
+/* --- 
+   --- 3.Truy vấn dữ liệu Hình ảnh Sản phẩm 
+   --- 
+*/
+$sqlSelect = <<<EOT
+    SELECT hsp.hsp_tentaptin
+    FROM `hinhsanpham` hsp
+    WHERE hsp.sp_ma = $sp_ma
+EOT;
+
+// Thực thi câu truy vấn SQL để lấy về dữ liệu ban đầu của record 
+$result = mysqli_query($conn, $sqlSelect);
+// Khi thực thi các truy vấn dạng SELECT, dữ liệu lấy về cần phải phân tích để sử dụng
+// Thông thường, chúng ta sẽ sử dụng vòng lặp while để duyệt danh sách các dòng dữ liệu được SELECT
+// Ta sẽ tạo 1 mảng array để chứa các dữ liệu được trả về
+$danhsachhinhanh = [];
+while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    $danhsachhinhanh[] = array(
+        'hsp_tentaptin' => $row['hsp_tentaptin']
+    );
+}
+/* --- End Truy vấn dữ liệu Hình ảnh sản phẩm --- */
+/*
+danhsachhinhanh = [
+    'hinh1',
+    'hinh2',
+    'hinh3'
+];
+
+sanphamRow = [
+    'sp_ma' => 1,
+    'sp_ten' => 'SAMSUNG GALAXY',
+    ...
+    'danhsachhinhanh' => [
+        'hinh1',
+        'hinh2',
+        'hinh3'
+    ]
+]
+*/
+// Hiệu chỉnh dữ liệu theo cấu trúc để tiện xử lý
+$sanphamRow['danhsachhinhanh'] = $danhsachhinhanh;
+
 // Yêu cầu `Twig` vẽ giao diện được viết trong file `backend/sanpham/chitiet.html.twig`
 // với dữ liệu truyền vào file giao diện được đặt tên là `sanpham`
 // dd($sanphamRow);
