@@ -219,12 +219,12 @@ Sản phẩm {{ sanpham.sp_ten }}
 
     <div class="card">
         <div class="container-fliud">
-            <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post" action="/php/twig/frontend/giohang/themvaogiohang">
+            <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post" action="#">
                 {% set hinhsanphamdautien = sanpham.danhsachhinhanh|first %}
                 <input type="hidden" name="sp_ma" id="sp_ma" value="{{ sanpham.sp_ma }}" />
                 <input type="hidden" name="sp_ten" id="sp_ten" value="{{ sanpham.sp_ten }}" />
                 <input type="hidden" name="sp_gia" id="sp_gia" value="{{ sanpham.sp_gia }}" />
-
+                <input type="hidden" name="hinhdaidien" id="hinhdaidien" value="{{ hinhsanphamdautien.hsp_tentaptin }}" />
 
                 <div class="wrapper row">
                     <div class="preview col-md-6">
@@ -319,6 +319,42 @@ Sản phẩm {{ sanpham.sp_ten }}
 
 {% block customscripts %}
 <script>
+    
+    $('#btnThemVaoGioHang').click(function (event) {
+        event.preventDefault();
+        // Nhờ AJAX gởi đi
+        // Chuẩn bị dữ liệu để gởi đi
+        var dulieugoi = {
+            sp_ma: $('#sp_ma').val(), // 1
+            sp_ten: $('#sp_ten').val(), //Samsung
+            sp_gia: $('#sp_gia').val(), //12000000.00
+            hinhdaidien: $('#hinhdaidien').val(), //2047_tinh-yeu-ngot-ngao.jpg
+            soluong: $('#soluong').val(), // 3
+        };
+        //console.log((dulieugoi));
 
+        // Gởi dữ liệu đi (sử dụng JQUERY AJAX)
+        $.ajax({
+            url: '/web02/frontend/ajax/giohang-themsanpham-ajax',
+            method: "POST",
+            dataType: 'json',
+            data: dulieugoi,
+            success: function (data) {
+                console.log(data);
+                var htmlString =
+                    `Sản phẩm đã được thêm vào Giỏ hàng. <a href="#">Xem Giỏ hàng</a>.`;
+                $('#thongbao').html(htmlString);
+                // Hiện thông báo
+                $('.alert').removeClass('d-none').addClass('show');
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(textStatus, errorThrown);
+                var htmlString = `<h5>Không thể xử lý</h5>`;
+                $('#thongbao').html(htmlString);
+                // Hiện thông báo
+                $('.alert').removeClass('d-none').addClass('show');
+            }
+        });
+    });
 </script>
 {% endblock %}
