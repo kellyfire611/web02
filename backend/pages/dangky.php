@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../dbconnect.php';
+require_once __DIR__ . '/../../dbconnect.php';
 
 // Load các thư viện (packages) do Composer quản lý vào chương trình
-require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/../../vendor/autoload.php';
 
 // Namespace \ ClassName
 // Company/Org \ SuiteApp \ ClassName
