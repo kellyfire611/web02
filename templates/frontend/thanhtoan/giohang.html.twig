@@ -88,6 +88,11 @@ Giỏ hàng
 
 {% block customscripts %}
 <script>
-    
+    $('.btn-delete-sanpham').on('click', function () {
+        event.preventDefault();
+        var id = $(this).data('sp-ma');
+        console.log(id);
+        alert(id);
+    });
 </script>
 {% endblock %}
