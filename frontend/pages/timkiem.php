@@ -168,5 +168,13 @@ echo $twig->render(
         'danhsachnhasanxuat' => $nhasanxuatData,
         'danhsachkhuyenmai' => $khuyenmaiData,
         'danhsachsanpham' => $dataDanhSachSanPham,
+
+        // Keyword người dùng đã tìm kiếm
+        'keyword_tensanpham' => $keyword_tensanpham,
+        'keyword_loaisanpham' => $keyword_loaisanpham,
+        'keyword_nhasanxuat' => $keyword_nhasanxuat,
+        'keyword_khuyenmai' => $keyword_khuyenmai,
+        'keyword_sotientu' => $keyword_sotientu,
+        'keyword_sotienden' => $keyword_sotienden,
     ]
 );
