@@ -58,6 +58,8 @@ require_once __DIR__ . '/../dbconnect.php';
                     include('sanpham/danhsach.php');
                 } else if($page == 'sanpham_them') {
                     include('sanpham/them.php');
+                } else if($page == 'dashboard') {
+                    include('pages/dashboard.php');
                 }
                 ?>
             </div><!-- /End content -->
