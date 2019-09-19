@@ -39,4 +39,12 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
             <button class="btn btn-primary btn-sm form-control" id="refreshBaoCaoSanPham">Refresh dữ liệu</button>
         </div> <!-- Tổng số mặt hàng -->
     </div><!-- row -->
+
+     <div class="row">
+        <!-- Biểu đồ thống kê loại sản phẩm -->
+        <div class="col-sm-6 col-lg-6">
+            <canvas id="chartOfobjChartThongKeLoaiSanPham"></canvas>
+            <button class="btn btn-outline-primary btn-sm form-control" id="refreshThongKeLoaiSanPham">Refresh dữ liệu</button>
+        </div><!-- col -->
+    </div><!-- row -->
 </div>

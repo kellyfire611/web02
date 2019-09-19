@@ -16,9 +16,9 @@ require_once __DIR__ . '/../dbconnect.php';
     <!-- Liên kết thêm FONT AWESOME -->
     <link rel="stylesheet" href="./../public/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <style>
-    
-    </style>
+    <?php if($page == 'dashboard') : ?>
+        <link rel="stylesheet" href="./../public/vendor/Chart.js/Chart.min.css">
+    <?php endif ?>
 </head>
 <body>
     <div class="container">
@@ -105,6 +105,8 @@ require_once __DIR__ . '/../dbconnect.php';
         <script src="./../public/vendor/jqueryvalidation/jquery.validate.min.js"></script>
         <script src="./../public/vendor/jqueryvalidation/localization/messages_vi.min.js"></script>
         <!-- <script src="./../public/js/sanpham/sanpham-validate.js"></script> -->
+    <?php elseif($page == 'dashboard') : ?>
+        <script src="./../public/vendor/Chart.js/Chart.min.js"></script>
     <?php endif ?>
 </body>
 </html>
