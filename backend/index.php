@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../dbconnect.php';
-
+$page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,7 @@ require_once __DIR__ . '/../dbconnect.php';
             <!-- Content -->
             <div class="col-md-9">
                 <?php
-                $page = isset($_GET['page']) ? $_GET['page'] : 'sanpham_danhsach';
+                
 
                 if($page == 'loaisanpham_danhsach') {
                     include('loaisanpham/danhsach.php');
@@ -107,6 +107,7 @@ require_once __DIR__ . '/../dbconnect.php';
         <!-- <script src="./../public/js/sanpham/sanpham-validate.js"></script> -->
     <?php elseif($page == 'dashboard') : ?>
         <script src="./../public/vendor/Chart.js/Chart.min.js"></script>
+        <script src="./../public/js/pages/dashboard.js"></script>
     <?php endif ?>
 </body>
 </html>
